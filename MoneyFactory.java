@@ -1,13 +1,13 @@
 public class MoneyFactory {
-    public Money getMoney(String currencyCode, Float amount) {
+    public Money getMoney(String currencyCode, Double amount) {
         switch (currencyCode) {
             case "IDR":
                 return new IDR(amount);
             case "USD":
                 return new USD(amount);
-            case "EUR":
+            case "EURO":
                 return new EUR(amount);
-            case "GBP":
+            case "POUNDS":
                 return new GBP(amount);
             
             default:

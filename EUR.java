@@ -1,6 +1,6 @@
 public class EUR extends Money {
-    EUR(float amount){
-        this.currencyCode = "EUR";
+    EUR(double amount){
+        this.currencyCode = "EURO";
         this.amount = amount;
     }
 }

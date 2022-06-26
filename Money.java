@@ -1,8 +1,16 @@
+import java.text.DecimalFormat;
+
 public class Money {
     String currencyCode = "";
-    Float amount = Float.valueOf(0);
+    Double amount = Double.valueOf(0);
 
     String print () {
-        return this.currencyCode + " " + this.amount;
+        DecimalFormat df = new DecimalFormat("0.00");
+        Currency currency = getCurrency();
+        return currency.getSymbol() + " " + df.format(this.amount) + " " + currency.getDisplayName();
+    }
+
+    public Currency getCurrency() {
+        return Currency.get(this.currencyCode);
     }
 }

@@ -1,5 +1,5 @@
 public class IDR extends Money{
-    IDR(float amount) {
+    IDR(double amount) {
         this.currencyCode = "IDR";
         this.amount = amount;
     }
