@@ -14,15 +14,17 @@ public class MoneyChanger {
 
         try (Scanner input = new Scanner(System.in)){
             
+            System.out.println("Money Changer - ForeignerMoney");
+            System.out.println("==============================\n");
             System.out.print("Masukkan Jenis Mata Uang Asing [USD | EUR | GBP] : ");
             String to = input.nextLine().toUpperCase();
 
-            if (!targetCurrency.contains(to)) {
-                throw new IllegalArgumentException("unsupported target currency");
-            }
-
             System.out.print("Masukkan Nominal Uang yang akan ditukarkan : IDR ");
             float amount = input.nextFloat();
+
+            if (!targetCurrency.contains(to)) {
+                throw new Exception("Mata Uang Yang Anda Masukkan Salah, Silahkan Coba Kembali!");
+            }
 
             Money idr = new IDR(amount);
             Money toMoney = exchange(to, idr);

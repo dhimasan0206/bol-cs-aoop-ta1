@@ -6,9 +6,9 @@ public class ExchangeRate {
     ExchangeRate() {
         HashMap<String, Float> idr = new HashMap<>();
         idr.put("IDR", (float)1);
-        idr.put("USD", (float)14829.50);
-        idr.put("EUR", (float)15661.73);
-        idr.put("GBP", (float)18187.64);
+        idr.put("USD", (float)12000);
+        idr.put("EUR", (float)15000);
+        idr.put("GBP", (float)17500);
         this.rates.put("IDR", idr);
 
         HashMap<String, Float> usd = new HashMap<>();
