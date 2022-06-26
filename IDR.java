@@ -5,6 +5,7 @@ public class IDR extends Money{
         this.amount = amount;
     }
 
+    @Override
     String print () {
         return this.currencySymbol + " " + this.amount;
     }
