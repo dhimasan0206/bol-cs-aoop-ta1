@@ -1,6 +1,7 @@
 public class USD extends Money {
-    USD(float amount) {
+    USD(double amount) {
         this.currencyCode = "USD";
+        this.currencySymbol = "$";
         this.amount = amount;
     }
 }

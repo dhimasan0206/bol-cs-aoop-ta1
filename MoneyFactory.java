@@ -1,14 +1,14 @@
 public class MoneyFactory {
-    public Money getMoney(String currencyCode, Float amount) {
+    public Money getMoney(String currencyCode, Double amount) {
         switch (currencyCode) {
             case "IDR":
                 return new IDR(amount);
             case "USD":
                 return new USD(amount);
-            case "EUR":
-                return new EUR(amount);
-            case "GBP":
-                return new GBP(amount);
+            case "Euro":
+                return new Euro(amount);
+            case "Pounds":
+                return new Pounds(amount);
             
             default:
                 throw new ExceptionInInitializerError("unsupported currency");

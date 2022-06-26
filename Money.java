@@ -1,8 +1,9 @@
 public class Money {
     String currencyCode = "";
-    Float amount = Float.valueOf(0);
+    String currencySymbol = "";
+    Double amount = Double.valueOf(0);
 
     String print () {
-        return this.currencyCode + " " + this.amount;
+        return this.currencySymbol + " " + this.amount + " " + this.currencyCode;
     }
 }
