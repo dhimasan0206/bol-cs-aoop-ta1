@@ -1,30 +1,30 @@
 import java.util.HashMap;
 
 public class ExchangeRate {
-    private HashMap<String, HashMap<String, Float>> rates = new HashMap<>();
+    private HashMap<String, HashMap<String, Double>> rates = new HashMap<>();
 
     ExchangeRate() {
-        HashMap<String, Float> idr = new HashMap<>();
-        idr.put("IDR", (float)1);
-        idr.put("USD", (float)12000);
-        idr.put("EUR", (float)15000);
-        idr.put("GBP", (float)17500);
+        HashMap<String, Double> idr = new HashMap<>();
+        idr.put("IDR", (double)1);
+        idr.put("USD", (double)12000.00);
+        idr.put("EURO", (double)15000.00);
+        idr.put("POUNDS", (double)17500.00);
         this.rates.put("IDR", idr);
 
-        HashMap<String, Float> usd = new HashMap<>();
-        usd.put("USD", (float)1);
+        HashMap<String, Double> usd = new HashMap<>();
+        usd.put("USD", (double)1);
         this.rates.put("USD", usd);
 
-        HashMap<String, Float> eur = new HashMap<>();
-        eur.put("EUR", (float)1);
-        this.rates.put("EUR", eur);
+        HashMap<String, Double> eur = new HashMap<>();
+        eur.put("EURO", (double)1);
+        this.rates.put("EURO", eur);
 
-        HashMap<String, Float> gbp = new HashMap<>();
-        gbp.put("GBP", (float)1);
-        this.rates.put("GBP", gbp);
+        HashMap<String, Double> gbp = new HashMap<>();
+        gbp.put("POUNDS", (double)1);
+        this.rates.put("POUNDS", gbp);
     }
 
-    public float getExchangeRate(String from, String to) {
+    public double getExchangeRate(String from, String to) {
         if (from.equals(to)) {
             return 1;
         }

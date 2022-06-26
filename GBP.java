@@ -1,6 +1,6 @@
 public class GBP extends Money{
-    GBP(float amount) {
-        this.currencyCode = "GBP";
+    GBP(double amount) {
+        this.currencyCode = "POUNDS";
         this.amount = amount;
     }
 }
